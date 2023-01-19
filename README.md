@@ -9,7 +9,6 @@ Choice of Carbon emissions - found huge dataset of 65000 rows plus of carbon emi
 Brainstorm:
  - countries emission comparison
  - where is the peak of CO2 emission
- - 
 
 Tool
 - SQL - clean data
