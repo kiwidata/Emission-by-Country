@@ -10,3 +10,8 @@ Brainstorm:
  - countries emission comparison
  - where is the peak of CO2 emission
  - 
+
+Tool
+- SQL - clean data
+- Python - doing some analysis
+- Tableau
