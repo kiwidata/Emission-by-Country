@@ -7,4 +7,6 @@ Emissions or electrical vehicles
 Choice of Carbon emissions - found huge dataset of 65000 rows plus of carbon emission by country
 
 Brainstorm:
-1) 
+ - countries emission comparison
+ - where is the peak of CO2 emission
+ - 
