@@ -17,6 +17,6 @@ Tool
 - Tableau
 
 Group:
-Visualization (PowerBI or Tableau): 
-Python analysis:
-SQL database:
+- Visualization (PowerBI or Tableau): 
+- Python analysis:
+- SQL database:
