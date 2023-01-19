@@ -15,3 +15,8 @@ Tool
 - SQL - clean data
 - Python - doing some analysis
 - Tableau
+
+Group:
+Visualization (PowerBI or Tableau): 
+Python analysis:
+SQL database:
