@@ -19,3 +19,5 @@ Group:
 - Visualization (PowerBI or Tableau): 
 - Python analysis:
 - SQL database:
+
+1) Some statistic and linear regression completed
