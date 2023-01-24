@@ -2,6 +2,6 @@
 
 ## SQL/RDS/EDR
 
-## Pyhon
+## Python
 
 ## Tableau
