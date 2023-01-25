@@ -17,13 +17,15 @@ It also includes the following eight contributing factors.
 ## Check the dataset
 * How big is this dataset, there are 63104 rows and time period starting from 1750 to 2021. 
 * use Python to plot the trend of annual total global emissions. 
-![fig](https://github.com/violetqq0221/Amazon_Vine_Analysis/blob/main/nonvine_member_review.PNG)
+![fig]https://github.com/kiwidata/Emission-by-Country/blob/violet-huang/first_segment/Trend%20of%20annual%20total%20global%20emissions.PNG
 ** The plot shows the globlal emission level is exponetially growing. 
 ** Our goal is to predict the global CO2 emissions in the future year[2030,2040,2050,2100] by linear regression analysis.
 **
 
 ## The questions that the team plans to answer with the project 
 
-*** Cluster learning to check the period of 50 years 
+* Cluster learning to check the period of 50 years 
 
-*** Predict CO2 emission in the future years.
+* Predict CO2 emission in the future years.
+
+
