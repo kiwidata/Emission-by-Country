@@ -19,7 +19,7 @@ It also includes the following eight contributing factors.
 * use Python to plot the trend of annual total global emissions. 
 ![Anuual total global emissions](https://github.com/kiwidata/Emission-by-Country/blob/violet-huang/first_segment/Trend%20of%20annual%20total%20global%20emissions.PNG)
 
-** The plot shows the globlal emission level is exponetially growing. 
+***The plot shows the globlal emission level is exponetially growing.***
 ** Our goal is to predict the global CO2 emissions in the future year[2030,2040,2050,2100] by linear regression analysis.
 **
 
