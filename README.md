@@ -1,14 +1,14 @@
 # Group Project - Emission
 
-Discussion regarding topic for analysis
+## Discussion regarding topic for analysis
 
 Emissions or electrical vehicles
 
 Choice of Carbon emissions - found huge dataset of 65000 rows plus of carbon emission by country
 
 Brainstorm:
- - countries emission comparison
- - where is the peak of CO2 emission
+ - countries emission comparison?
+ - where is the peak of CO2 emission?
 
 Tool
 - SQL - clean data
