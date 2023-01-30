@@ -91,3 +91,12 @@ The model comparison shows 3 important components:
 
 - All graphs shows that the CO2 level will keep increasing with the current global emission rate. This is true for all 3 predictions. 
 
+The table below shows the prediction rate of all the models in the next 30 years. 
+
+![all model forecast](https://user-images.githubusercontent.com/111706055/215380881-5b886c60-5913-46dd-bc9c-591e56721b27.png)
+
+All model indeed shows an increase in CO2 emission globally over the years.
+
+## Conclusion 
+
+In 2015 emissions were 35558 MtCO2. Based on the paris accord the goal was to reduce it by 50% by 2030 (17779 MtCO2). However based on our models this will not be the case. The most accurate model '1980-2021' shows a prediction of 42129 MtCO2. An 18% increased from 2015. The most optimistic model '1900-2022' shows a prediction of 34367 MtCO2 by 2030. We can conclude that, based on these models, The paris climate accord goal of CO2 emission will not be reached based on the current levels of global emissions. This is assuming the emission trend remains the same. 
