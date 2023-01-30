@@ -58,3 +58,16 @@ The R2 was accurate by 90.7% which mean the predictions were accurate by 90.7%. 
 
 ![1900_2021 linear](https://user-images.githubusercontent.com/111706055/215378373-cbfabc9c-4c64-403b-b9de-83fe67222fa9.png)
 
+
+### 2000-2021
+
+The graph still shows a linear growth and its R2 is 91.4% accurate. However it does appear less agressive than the previous plot from 1900-2021.
+This might signal a plateau for the emission. Hence this might signal better predictions. Furthermore the 2021 emission (38555.41 MtCO2) of this linear regression is much closer to the 2021 total actuals of 371123.85 MtCO2 which reinforced the theory of a better prediction than the previous 1900-2021 model. 
+
+![2000_2021 timeframe](https://user-images.githubusercontent.com/111706055/215378649-7c76645f-0d06-4c16-9bb2-6c9b07f083cd.png)
+
+Comparing both linear model prediction '1900-2021' and '2000-2021' we have the following:
+
+![both models](https://user-images.githubusercontent.com/111706055/215379183-37b05b74-484c-4b17-9121-197ac0b4b307.png)
+
+The prediction from the '2000-2021' model is more than 50% than that of the 1900-2021 model in 2100. Both are accurate in term of their R2. However the predictions are not close. This shows the growth rate of emission is not constant and actually accelerated over time. One final linear regression with the timeframe of 1980-2021 was done to compare to the 2000-2021 timeframe.
