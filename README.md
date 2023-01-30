@@ -50,3 +50,11 @@ Although this graph really does show the massive upscale of CO2 over the years. 
 
 ### 1900-2021
 
+The graph below shows more a linear growth than an exponential growth. Linear regression was used for this data. 
+
+![1900_2021 timeframe](https://user-images.githubusercontent.com/111706055/215377535-a33c8826-f855-43d5-91d7-e760ae31b9bb.png)
+
+The R2 was accurate by 90.7% which mean the predictions were accurate by 90.7%. However it seems that the emission growth rate changed drastically over the last 120 years. Using this linear model we predicted by 2020 there would be 31907.7 MtCO2 emitted, but an actuality it was 35264.08 MtCO2 globally. The emission growth rate might be a factor. Hence we reduced the timeframe to look at more recent dates to find more accurate predictions that would assumed the actual current CO2 emission growth rate.
+
+![1900_2021 linear](https://user-images.githubusercontent.com/111706055/215378373-cbfabc9c-4c64-403b-b9de-83fe67222fa9.png)
+
