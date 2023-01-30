@@ -99,4 +99,6 @@ All model indeed shows an increase in CO2 emission globally over the years.
 
 ## Conclusion 
 
-In 2015 emissions were 35558 MtCO2. Based on the paris accord the goal was to reduce it by 50% by 2030 (17779 MtCO2). However based on our models this will not be the case. The most accurate model '1980-2021' shows a prediction of 42129 MtCO2. An 18% increased from 2015. The most optimistic model '1900-2022' shows a prediction of 34367 MtCO2 by 2030. We can conclude that, based on these models, The paris climate accord goal of CO2 emission will not be reached based on the current levels of global emissions. This is assuming the emission trend remains the same. 
+The top 3 polluting countries (China, USA, and India) contributes to more than 51% of all global CO2 currently (2021).
+
+In 2015 global emissions were 35558 MtCO2. Based on the paris accord the goal was to reduce it by 50% by 2030 (17779 MtCO2). However based on our models this will not be the case. The most accurate model '1980-2021' shows a prediction of 42129 MtCO2. An 18.5% increased from 2015. The most optimistic model '1900-2022' shows a prediction of 34367 MtCO2 by 2030 which would show a slight decline from 2015, however this is assuming emission growth rate decrease, and even then it will not meet the desired goal. We can conclude that, based on these models, The paris climate accord goal of CO2 emission will not be reached based on the current levels of global emissions. This is assuming the emission trend remains the same. 
