@@ -66,8 +66,28 @@ This might signal a plateau for the emission. Hence this might signal better pre
 
 ![2000_2021 timeframe](https://user-images.githubusercontent.com/111706055/215378649-7c76645f-0d06-4c16-9bb2-6c9b07f083cd.png)
 
-Comparing both linear model prediction '1900-2021' and '2000-2021' we have the following:
+Comparing both linear model predictions '1900-2021' and '2000-2021' we have the following:
 
 ![both models](https://user-images.githubusercontent.com/111706055/215379183-37b05b74-484c-4b17-9121-197ac0b4b307.png)
 
 The prediction from the '2000-2021' model is more than 50% than that of the 1900-2021 model in 2100. Both are accurate in term of their R2. However the predictions are not close. This shows the growth rate of emission is not constant and actually accelerated over time. One final linear regression with the timeframe of 1980-2021 was done to compare to the 2000-2021 timeframe.
+
+### 1980-2021
+The graph still shows a linear growth and its R2 is 96.37% accurate.This is more than 5% more accurate than our previous models. The 2021 emission (37661 MtCO2) of this linear regression is much closer to the 2021 total actuals of 371123.85 MtCO2 than our previous models. This model seems to have the best accuracy and also take in consideration the actual growth rate.
+
+![1980_2021 timeframe](https://user-images.githubusercontent.com/111706055/215379606-f626836d-9774-4efc-b259-c8b46f8a7ecb.png)
+
+Comparing all linear model predictions '1900-2021', '2000-2021', '1980-2021' we have the following:
+
+![model comparison ](https://user-images.githubusercontent.com/111706055/215380250-68e775a5-9e09-4389-a781-db384c399e18.png)
+
+The prediction models 2000-2021 and 1980-2021 seems very close. Especially looking at the next 5 years. This shows evidence that the actual growth rate did not change much during the last 40 years and that the prediction model can be used.The prediction does start to diverge the longer time passes. 
+
+The model comparison shows 3 important components:
+
+- Since 1900 the emission growth rate has drastically increased and our predicted emission shifted upward over the years. This is apparent looking at the 2020 year where the actual CO2 emission quantity is much larger than the predicted forecast of the '1900-2021' trend.
+
+- The graphs shows that the emission level does seems to want to plateau in term of growth rate. This is evident since the 1980-2021 and 2000-2021 models are very close in term of predictions. 
+
+- All graphs shows that the CO2 level will keep increasing with the current global emission rate. This is true for all 3 predictions. 
+
