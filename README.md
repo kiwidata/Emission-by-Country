@@ -4,6 +4,68 @@ Carbon emissions and environmental protection issues become a widely used term a
 # Dataset information
 This dataset provided by CICERO Center for International Climate Research as part of the Global Carbon Project is an in-depth look into the global CO2 emissions at the country-level, facilitating a better comprehension of each nation's contribution to the global cumulative impact of human activity on climate. Emissions from coal, oil, gas, cement, flaring, and other sources, as well as emissions per capita, are all included in this country-level survey of global fossil CO2 emissions.
 
+The dataset is publicly available at https://doi.org/10.5281/zenodo.7215364 and licenced under the <a href="https://datacatalog.worldbank.org/public-licenses#cc-by">Creative Commons Attribution 4.0 International license</a>.
+
+# Project structure
+
+The project is divided into three stages:
+
+* Stage 1: Data cleaning and preparation
+* Stage 2: Data exploration and visualization
+* Stage 3: Predictive analysis with the machine learning algorithm
+
+# Built with
+
+* **Programming language**
+	- Python 3.7
+* **Libraries**
+	- **dataset handling**: pandas, numpy
+	- **data visualization**: tableau, matplotlib
+	- **machine learning**: scikit-learn
+* **Presentation**: 
+	- Jupyter Notebook
+  
+# Summary of all project stages
+The highlights of all project stages are briefly introduces in the following:
+
+### Stage 1: Data cleaning and preparation
+
+* Global data overview
+* Definition of the initial project goals
+* Data cleaning
+    - dealing with missing values
+    - transformation of the columns into a numerical data type
+    - renaming of features
+    - removing empty columns and rows
+* Data frame transformation
+    - melting of the data for each variable
+    - integration of the data into a suitable data frame format
+* Removal of missing values
+    - detection of missing values
+    - removal of missing values by filtering the columns and rows, so that minimal amount of features and rows are lost
+* Export the clean data frame to a file
+
+### Stage 2: Data exploration and visualization
+
+* Feature/column abbreviations and units
+* Definition of the hypothesis to be tested
+* Feature engineering
+    - features overview
+    - derivation of additional important features
+    - removal of unnecessary features
+* Prepare the visualization
+* Create plots
+	- a global look onto all relationships and detailed plots of chosen dependencies
+    - detection of outliers
+    - discussion of dependencies and trends
+* Conclusions
+
+### Stage 3: Predictive analysis with the machine learning algorithm
+
+* Selection of dependent and independent variables
+* Dataset splitting into training and test subsets
+* Feature selection with recursive feature elimination and cross-validation
+* Conclusions
 
 # SQL/RDS/EDR
 
