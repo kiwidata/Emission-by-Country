@@ -25,12 +25,13 @@ To perform the analysis, we performed the following steps:
 ## Results
 ![](figure1.png)
 ![](figure2.png)
-![](figure3.png)
-![](figure4.png)
+
 
 ## Discussion
 From the results, we can see that linear regression can capture the increasing trend of global CO2 emissions.
-We experimented using differnt lookback time periods (20, 50, 100, 200 years) to examine model accuracy, we found that using longer time periods can achieve better accuracy.  The intuition is that the more data we have, the model can generalize better, vs shorter time periods can only capture localized trends.
+I experimented using differnt lookback time periods (20, 50, 70 years) to examine model accuracy, although longer time period present more data, however the plots of data shows the emission have expanation growth for past 70 years. The accuracy of longer period time point doesn't show the same trend. 
+After group discussion, we continue to preprocess the data to try to include the model accuracy. 
+
 
 # Unsupervised Learning 
 The dataset provides detailed emissions level by country for over 200 years.  This can give us an insight into how each country's emission level changes over the course of history.  By grouping countrie together, we can identify large emitting countries quickly and target them to reduce emissions the most.  For this task, we utlize unsupervised learning techniques, specifically K-means clustering. This is also a great use case because K-means can learn from un-labeled data to group the counties by their emissions levels.  We performed the following steps:
@@ -66,8 +67,8 @@ Deep neural networks has the ability to learn from large sets of input data, reg
 * Observe model loss and accuracy
 
 ## Results
-![](figure10.png)
-![](figure11.png)
+![Deep_learning](figure10.png)
+
 
 ## Discussion
 For deep neural network, the applicaion we used in class was for classfication, where the target variable is labled and belongs to a class. In our use case, the target variable is continuous, and the model loss fuction "binary_crossentropy" is not a good fit because it does not work on continous data.  This is shown in the results where the model accuracy is 0 after traing.  To overcome this, we switched the loss function to "mean squared error" to try to evaluate the model.  We are able to show that the model is able to reduce the loss and improve accuracy after training.  However, as we learned in class, deep neural network is not meant to be a replacement for learning regression or logistical regression, and in many cases it does not perform better.  For our use case, it definitely seems to be the case where it is not a good fit.  We believe using linear regression can give us the best result for our dataset and goal.
