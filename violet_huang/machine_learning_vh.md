@@ -31,7 +31,7 @@ To perform the analysis, we performed the following steps:
 From the results, we can see that linear regression can capture the increasing trend of global CO2 emissions.
 I experimented using differnt lookback time periods (20, 50, 70 years) to examine model accuracy, although longer time period present more data, however the plots of data shows the emission have expanation growth for past 70 years. The accuracy of longer period time point doesn't show the same trend. 
 After group discussion, we continue to preprocess the data to try to include the model accuracy. 
-![Original data plot_expanation growth](https://github.com/kiwidata/Emission-by-Country/blob/violet-huang/violet_huang/2020%20linear%20regression.PNG)
+![Original data plot_expanation growth](https://github.com/kiwidata/Emission-by-Country/blob/violet-huang/violet_huang/original%20plot_expanation%20growth.PNG)
 
 
 # Unsupervised Learning 
