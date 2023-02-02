@@ -67,8 +67,6 @@ The highlights of all project stages are briefly introduces in the following:
 * Feature selection with recursive feature elimination and cross-validation
 * Conclusions
 
-# SQL/RDS/EDR
-
 # Statistics and Linear Regression
 
 ## Overview
@@ -149,7 +147,7 @@ The table below shows the prediction rate of all the models in the next 30 years
 
 All models indeed shows an increase in CO2 emission globally over the years.
 
-## Conclusion 
+## Discussion
 
 The top 3 polluting countries (China, USA, and India) contributes to more than 51% of all global CO2 currently (2021).
 
