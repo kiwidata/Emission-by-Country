@@ -28,8 +28,6 @@ The project is divided into three stages:
 	- Jupyter Notebook
 	- Tableau
 
-# Statistics and Linear Regression
-
 # Stage 1: Data cleaning and exploration
 
 ## Global Data Overview
@@ -53,19 +51,27 @@ The dataset provided was cleaned and ready for use for analysis. Some cleaning w
 - All rows except 2021 year was shown to analyze the 2021 biggest polluters (jupiter notebook)
 
 ## Export clean data frame to a file
-- Exported the percentage of emiiters by country
-- Exported the 2021-2050 global CO2 prediction by country
+- Exported the percentage of emiiters by country - https://github.com/kiwidata/Emission-by-Country/blob/main/emission%25bytype.csv
+- Exported the 2021-2050 global CO2 prediction by country - https://github.com/kiwidata/Emission-by-Country/blob/main/CO2%20Emission%20Predictions%202021-2050.csv
 
+# Statistics and Linear Regression
 
-## Results
-
-### Top 3 Polluters
+## Top 3 Polluters
 
 Based on our dataset : China (30.9%), USA (13.5%), India (7.3%) are the world biggest polluters. These 3 countries emitted more than 51.7% (19189 MtCO2) of all global CO2 in 2021.
 
 ![Top 3 Polluters ](https://user-images.githubusercontent.com/111706055/215375812-a95d7479-8eac-4b3d-80fb-9d0c6245e846.png)
 
-### Emission Trends & Linear Regression
+## Emission Trends & Linear Regression
+
+Regression is machine learning technique used to predict continuous variables. The regression model can learn patterns that best fits the existing data and make future predictions beyond the range of current data.  This is an ideal use case for us since the CO2 emissions dataset contains large historical data and is continuous.  
+To perform the analysis, we performed the following steps:
+* Load the dataset into Pandas dataframe 
+* Clean the dataset by removing missing value since historical data is not complete
+* Drop non-numeric/unnecessary features such as country code, per-capita
+* Split the data into input and output
+* Instantiate a linear regression model for the sklearn library to perform linear regression
+* Make emission predictions on future years
 
 Looking at Emission Trends, we looked at 4 different timeframes : 1750-2021, 1900-2021, 2000-2021, and 1980-2021.
 
