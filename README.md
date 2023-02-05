@@ -10,9 +10,10 @@ The project is divided into three stages:
   * Definition of the initial project goals
   * Data exploration and cleaning
   * Export clean data frame to a file
-* Stage 2: Analysis using machine learning
-  * Linear Regression
+* Stage 2: Analysis
+  * Top 3 Polluters and Linear Regression
   * Unsupervised Machine Learning
+  * Deep Neural Network
 * Stage 3: Data Visualization
   * Visualization and Insights of CO2 emissions
 
@@ -54,7 +55,7 @@ The dataset provided was cleaned and ready for use for analysis. Some cleaning w
 - Exported the percentage of emiiters by country - https://github.com/kiwidata/Emission-by-Country/blob/main/emission%25bytype.csv
 - Exported the 2021-2050 global CO2 prediction by country - https://github.com/kiwidata/Emission-by-Country/blob/main/CO2%20Emission%20Predictions%202021-2050.csv
 
-# Statistics and Linear Regression
+# Stage 2: Analysis 
 
 ## Top 3 Polluters
 
@@ -119,7 +120,7 @@ Comparing the linear model predictions '1900-2021', '2000-2021', '1980-2021' we 
 
 ![model comparison ](https://user-images.githubusercontent.com/111706055/215380250-68e775a5-9e09-4389-a781-db384c399e18.png)
 
-The prediction models 2000-2021 and 1980-2021 seems very close. Especially looking at the next 5 years. This shows evidence that the actual growth rate did not change much during the last 40 years and that the prediction model can be used.The prediction does start to diverge the longer time passes. 
+The prediction models 2000-2021 and 1980-2021 seems very close. Especially looking at the next 5 years. This shows evidence that the actual growth rate did not change much during the last 40 years and that this prediction model can be used.The prediction does start to diverge the longer time passes. 
 
 The model comparison shows 3 important components:
 
@@ -135,11 +136,64 @@ The table below shows the prediction rate of all the models in the next 30 years
 
 All models indeed shows an increase in CO2 emission globally over the years.
 
-## Discussion
+### Discussion
 
 The top 3 polluting countries (China, USA, and India) contributes to more than 51% of all global CO2 currently (2021).
 
 In 1990 global emissions were 22757.48 MtCO2. Based on the paris accord the goal was to reduce emissions by at least 40% by 2030 (~16000 MtCO2) compared to 1990 levels. However based on our models this will not be the case. The most accurate model '1980-2021' shows a prediction of 42129 MtCO2 in 2030. An 85% increased from 1990. The most optimistic model '1900-2022' shows a prediction of 34367 MtCO2 by 2030 which would show a slight decline from today's level, however this is assuming emission growth rate decrease, and even then it will not meet the desired goal. We can conclude that, based on these models, The paris climate accord goal of CO2 emission will not be reached based on the current levels of global emissions. This is assuming the emission trend remains the same. 
 
+## Unsupervised Learning 
 
-# Tableau
+The dataset provides detailed emissions level by country for over 200 years.  This can give us an insight into how each country's emission level changes over the course of history.  By grouping countrie together, we can identify large emitting countries quickly and target them to reduce emissions the most.  For this task, we utlize unsupervised learning techniques, specifically K-means clustering. This is also a great use case because K-means can learn from un-labeled data to group the counties by their emissions levels.  We performed the following steps:
+* Load the dataset into Pandas dataframe 
+* Clean the dataset by removing missing value since historical data is not complete
+* Drop non-numeric/unnecessary features such as country code, per-capita
+* Standardize the data with StandardScaler
+* Create an elbow curve to find the best value for K.
+* Initialize and fit the model
+* Visualize the results using hvplot
+
+
+### Results
+![2021](https://github.com/kiwidata/Emission-by-Country/blob/violet-huang/violet_huang/clustering_2021.PNG)
+![2010](https://github.com/kiwidata/Emission-by-Country/blob/violet-huang/violet_huang/clustering_2010.PNG)
+![2000](https://github.com/kiwidata/Emission-by-Country/blob/violet-huang/violet_huang/clustering_2000.PNG)
+![1990](https://github.com/kiwidata/Emission-by-Country/blob/violet-huang/violet_huang/clustering_1990.PNG)
+![1990](https://github.com/kiwidata/Emission-by-Country/blob/violet-huang/violet_huang/clustering_1990.PNG)
+![1980](https://github.com/kiwidata/Emission-by-Country/blob/violet-huang/violet_huang/clustering_1980.PNG)
+![1980](https://github.com/kiwidata/Emission-by-Country/blob/violet-huang/violet_huang/clustering_1970.PNG)
+
+
+### Discussion
+To understand what the data can tell us, we performed K-means clustering at five year intervals going back 20 years.  We can see the trend of how large emitting countries change in history.  As history tells us, the large emitters started in Europe, and shifted to the US, and eventually China as well as China developed in the late 20th and early 21st century.  Although intuitive, it is very satisfying to see our model able to make the clustering correctly.
+
+## Deep Neural Network
+Deep neural networks has the ability to learn from large sets of input data, regardless of data complexity.  We wanted to explore deep neural networks to see if it's a good use case for our dataset as well.  To accomplish this task, we performed the following:
+* Load the dataset into Pandas dataframe 
+* Clean the dataset by removing missing value since historical data is not complete
+* Drop non-numeric/unnecessary features such as country code, per-capita
+* Standardize the data with StandardScaler
+* Split the preprocessed data into our features and target arrays
+* Split the preprocessed data into a training and testing dataset
+* Define the deep neural network using Keras library
+* Tuned number of neurons and number of hidden layers
+* Performed model traing on varying number of epochs
+* Observe model loss and accuracy
+
+## Results
+![Deep_learning](https://github.com/kiwidata/Emission-by-Country/blob/violet-huang/violet_huang/deep%20learning.PNG)
+
+## Discussion
+For deep neural network, the application we used in class was for classfication, where the target variable is labeled and belongs to a class. In our use case, the target variable is continuous, and the model loss fuction "binary_crossentropy" is not a good fit because it does not work on continous data.  This is shown in the results where the model accuracy is 0 after training.  To overcome this, we switched the loss function to "mean squared error" to try to evaluate the model.  We are able to show that the model is able to reduce the loss and improve accuracy after training.  However deep neural network is not meant to be a replacement for learning regression or logistical regression, and in many cases it does not perform better.  For our use case, it definitely seems to be the case where it is not a good fit.  We believed using linear regression gave us the best result for our dataset and goal.
+
+# Stage 3: Data Visualization
+
+## Visualization and Insights of CO2 emissions
+
+# Conclusion
+
+The paris climate accord goal of CO2 emission will not be reached based on the current levels of global emissions. Hence by 2030 we will not reach a 40% CO2 emission reduction rate compared to the 1990's level. Assuming the emission trend remains the same, the linear regression analysis shows the CO2 emission will keep increasing to about 42129 MtCO2 in 2030. Almost triple the target rate set for 2030 of ~16000 MtCO2.
+
+In 2021, based on our dataset, China (30.9%), USA (13.5%), India (7.3%) are the world biggest polluters. These 3 countries emitted more than 51.7% (19189 MtCO2) of all global CO2. By performing K-means clustering at five year intervals.  We saw the trend of how large emitting countries change thorughout history.  As history tells us, the largest emitters started in Europe in the early 20th century, shifted to the US, and eventually to China in the 21st century.
+
+One other model was performed 'deep neural network'. However it was not a good fit for our analysis since it was focusing in classification and not prediction. Our data is continuous.
