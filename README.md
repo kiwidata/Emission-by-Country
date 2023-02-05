@@ -1,18 +1,20 @@
 # Group Project - Emission by Country
-Carbon emissions and environmental protection issues become a widely used term and concept in the public debate on responsibility and abatement action against the threat of global climate change. Therefore, forecasting carbon emissions is of great significance to track countries' progress in meeting carbon emission targets set by the Paris Climate Agreement. This project analyzes estimates of global and national CO2 emissions using machine learning models aiming to predict CO2 emissions from country-specific parameters such as emissions from fossil fuels and emissions per capita.
-
-# Dataset information
-This dataset provided by CICERO Center for International Climate Research as part of the Global Carbon Project is an in-depth look into the global CO2 emissions at the country-level, facilitating a better comprehension of each nation's contribution to the global cumulative impact of human activity on climate. Emissions from coal, oil, gas, cement, flaring, and other sources, as well as emissions per capita, are all included in this country-level survey of global fossil CO2 emissions.
-
-The dataset is publicly available at https://doi.org/10.5281/zenodo.7215364 and licenced under the <a href="https://datacatalog.worldbank.org/public-licenses#cc-by">Creative Commons Attribution 4.0 International license</a>.
+Carbon emissions and environmental protection issues become a widely used term and concept in the public debate on responsibility and abatement action against the threat of global climate change. Therefore, forecasting carbon emissions is of great significance to track countries' progress in meeting carbon emission targets set by the Paris Climate Agreement. This project analyzes estimates of global and national CO2 emissions using machine learning models. The aim is to predict if the goal of the Paris Climate Agreement Accord can be reached. One specific goal, in particular in this analysis, is to find if global CO2 emission level will be reduce by more than 40% compare to the 1990s level of emission. 
 
 # Project structure
 
 The project is divided into three stages:
 
-* Stage 1: Data cleaning and preparation
-* Stage 2: Data exploration and visualization
-* Stage 3: Predictive analysis with the machine learning algorithm
+* Stage 1: Data cleaning and exploration
+  * Global data overview
+  * Definition of the initial project goals
+  * Data exploration and cleaning
+  * Export clean data frame to a file
+* Stage 2: Analysis using machine learning
+  * Linear Regression
+  * Unsupervised Machine Learning
+* Stage 3: Data Visualization
+  * Visualization and Insights of CO2 emissions
 
 # Built with
 
@@ -20,60 +22,40 @@ The project is divided into three stages:
 	- Python 3.7
 * **Libraries**
 	- **dataset handling**: pandas, numpy
-	- **data visualization**: tableau, matplotlib
+	- **data visualization**: matplotlib
 	- **machine learning**: scikit-learn
 * **Presentation**: 
 	- Jupyter Notebook
-  
-# Summary of all project stages
-The highlights of all project stages are briefly introduces in the following:
-
-### Stage 1: Data cleaning and preparation
-
-* Global data overview
-* Definition of the initial project goals
-* Data cleaning
-    - dealing with missing values
-    - transformation of the columns into a numerical data type
-    - renaming of features
-    - removing empty columns and rows
-* Data frame transformation
-    - melting of the data for each variable
-    - integration of the data into a suitable data frame format
-* Removal of missing values
-    - detection of missing values
-    - removal of missing values by filtering the columns and rows, so that minimal amount of features and rows are lost
-* Export the clean data frame to a file
-
-### Stage 2: Data exploration and visualization
-
-* Feature/column abbreviations and units
-* Definition of the hypothesis to be tested
-* Feature engineering
-    - features overview
-    - derivation of additional important features
-    - removal of unnecessary features
-* Prepare the visualization
-* Create plots
-	- a global look onto all relationships and detailed plots of chosen dependencies
-    - detection of outliers
-    - discussion of dependencies and trends
-* Conclusions
-
-### Stage 3: Predictive analysis with the machine learning algorithm
-
-* Selection of dependent and independent variables
-* Dataset splitting into training and test subsets
-* Feature selection with recursive feature elimination and cross-validation
-* Conclusions
+	- Tableau
 
 # Statistics and Linear Regression
 
-## Overview
+# Stage 1: Data cleaning and exploration
 
-Two Goals were set for this analysis.
-1) Statical Analysis to find the countries that contributed the most to global emissions. 
-2) The global emission trends and predictions to see if the Paris Accord 2030 Goal of CO2 Emission can be reached. The Paris Accord states that the goal for Emission should be at least a 40% reduction by 2030 compared to 1990 levels.
+## Global Data Overview
+
+This dataset provided by CICERO Center for International Climate Research as part of the Global Carbon Project is an in-depth look into the global CO2 emissions at the country-level, facilitating a better comprehension of each nation's contribution to the global cumulative impact of human activity on climate. CO2 Emissions (MtCO2) from coal, oil, gas, cement, flaring, and other sources, as well as emissions per capita, are all included in this country-level survey of global fossil CO2 emissions.
+
+The dataset is publicly available at https://doi.org/10.5281/zenodo.7215364 and licenced under the <a href="https://datacatalog.worldbank.org/public-licenses#cc-by">Creative Commons Attribution 4.0 International license</a>.
+
+## Project Goals
+
+Two Goals were set for this analysis:
+
+1) The global CO2 emission trend - to see if the Paris Accord 2030 goal of CO2 emission could be reached. The Paris Accord states that the goal for emission should be at least a 40% reduction by 2030 compared to 1990 CO2 levels.
+2) Statical Analysis to find the countries that contributed the most to global CO2 emissions and that improved the most over the years.
+
+## Data exploration and cleaning
+
+The dataset provided was cleaned and ready for use for analysis. Some cleaning was still done to properly used the data:
+- All rows except global were removed to be able to analyze the global trend (jupiter notebook)
+- Creating a table that showed the percentage of the type of emitters that pollutes by country and join it to our original table (Jupiter Notebook and SQL)
+- All rows except 2021 year was shown to analyze the 2021 biggest polluters (jupiter notebook)
+
+## Export clean data frame to a file
+- Exported the percentage of emiiters by country
+- Exported the 2021-2050 global CO2 prediction by country
+
 
 ## Results
 
