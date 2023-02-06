@@ -1,9 +1,9 @@
 # Group Project - Emission by Country
-Carbon emissions and environmental protection issues become a widely used term and concept in the public debate on responsibility and abatement action against the threat of global climate change. Therefore, forecasting carbon emissions is of great significance to track countries' progress in meeting carbon emission targets set by the Paris Climate Agreement. This project analyzes estimates of global and national CO2 emissions using machine learning models. The aim is to predict if the goal of the Paris Climate Agreement Accord can be reached. One specific goal, in particular in this analysis, is to find if global CO2 emission level will be reduce by more than 40% compare to the 1990s level of emission. 
+Carbon emissions and environmental protection issues become a widely used term and concept in the public debate on responsibility and abatement action against the threat of global climate change. Therefore, forecasting carbon emissions is of great significance to track countries' progress in meeting carbon emission targets set by the Paris Climate Agreement. This project analyzes estimates of global and national CO2 emissions using machine learning models. The aim is to predict if the goal of the Paris Climate Agreement Accord can be reached. One specific goal, in particular in this analysis, is to find if global CO2 emission level will be reduce by more than 40% compared to the 1990s level of emission. 
 
 # Project structure
 
-The project is divided into three stages:
+The project is divided into four stages:
 
 * Stage 1: Data cleaning and exploration
   * Global data overview
@@ -16,13 +16,14 @@ The project is divided into three stages:
   * Deep Neural Network
 * Stage 3: Data Visualization
   * Visualization and Insights of CO2 emissions
+* Conclusion
 
 # Built with
 
 * **Programming language**
 	- Python 3.7
 * **Libraries**
-	- **dataset handling**: pandas, numpy
+	- **dataset handling**: pandas, numpy, tensorflow
 	- **data visualization**: matplotlib
 	- **machine learning**: scikit-learn
 * **Presentation**: 
@@ -52,7 +53,7 @@ The dataset provided was cleaned and ready for use for analysis. Some cleaning w
 - All rows except 2021 year was shown to analyze the 2021 biggest polluters (jupiter notebook)
 
 ## Export clean data frame to a file
-- Exported the percentage of emiiters by country - https://github.com/kiwidata/Emission-by-Country/blob/main/emission%25bytype.csv
+- Exported the percentage of emitters by country - https://github.com/kiwidata/Emission-by-Country/blob/main/emission%25bytype.csv
 - Exported the 2021-2050 global CO2 prediction by country - https://github.com/kiwidata/Emission-by-Country/blob/main/CO2%20Emission%20Predictions%202021-2050.csv
 
 # Stage 2: Analysis 
@@ -68,8 +69,6 @@ Based on our dataset : China (30.9%), USA (13.5%), India (7.3%) are the world bi
 Regression is machine learning technique used to predict continuous variables. The regression model can learn patterns that best fits the existing data and make future predictions beyond the range of current data.  This is an ideal use case for us since the CO2 emissions dataset contains large historical data and is continuous.  
 To perform the analysis, we performed the following steps:
 * Load the dataset into Pandas dataframe 
-* Clean the dataset by removing missing value since historical data is not complete
-* Drop non-numeric/unnecessary features such as country code, per-capita
 * Split the data into input and output
 * Instantiate a linear regression model for the sklearn library to perform linear regression
 * Make emission predictions on future years
@@ -85,7 +84,7 @@ A linear regression was made by changing the emission variable into a log functi
 
 ![1750_2021 timeframe log scales](https://user-images.githubusercontent.com/111706055/215959763-988bd2c3-def3-4725-98e4-5b3e3b5c46f3.png)
 
-These graphs really does show the massive upscale of CO2 over the years. The R2 for the linear regression is 98.7% accurate which should in theory give us a very good prediction. Howvever the predictions seems quite high. Even looking at 2021 it shows 63487.6 MtCO2 which is almost double the actual number that we currenty have (37123 MtCO2). In 2100 its shows more than 20x the amount of CO2 emission than 2021. The growth rate of CO2 emission did change over the years, hence this model cannot be use because it assumes a constant growth rate and the predictions seems off the charts. The timeframe had to be adjusted to more recent dates.
+These graphs really does show the massive upscale of CO2 over the years. The R2 for the linear regression is 98.7% accurate which should in theory give us a very good prediction. However the predictions seems quite high. Even looking at 2021 it shows 63487.6 MtCO2 which is almost double the actual number that we currenty have (37123 MtCO2). In 2100 its shows more than 20x the amount of CO2 emission than 2021. The growth rate of CO2 emission did change over the years, hence this model cannot be use because it assumes a constant growth rate and the predictions seems off the charts. The timeframe had to be adjusted to more recent dates.
 
 ### 1900-2021
 
@@ -144,7 +143,8 @@ In 1990 global emissions were 22757.48 MtCO2. Based on the paris accord the goal
 
 ## Unsupervised Learning 
 
-The dataset provides detailed emissions level by country for over 200 years.  This can give us an insight into how each country's emission level changes over the course of history.  By grouping countrie together, we can identify large emitting countries quickly and target them to reduce emissions the most.  For this task, we utlize unsupervised learning techniques, specifically K-means clustering. This is also a great use case because K-means can learn from un-labeled data to group the counties by their emissions levels.  We performed the following steps:
+The dataset provides detailed emissions level by country for over 200 years.  This can give us an insight into how each country's emission level changes over the course of history.  By grouping countries together, we can identify large emitting countries quickly and target them to reduce emissions the most.  For this task, we utlize unsupervised learning techniques, specifically K-means clustering. This is also a great use case because K-means can learn from un-labeled data to group the counties by their emissions levels.  We performed the following steps:
+
 * Load the dataset into Pandas dataframe 
 * Clean the dataset by removing missing value since historical data is not complete
 * Drop non-numeric/unnecessary features such as country code, per-capita
@@ -169,6 +169,7 @@ To understand what the data can tell us, we performed K-means clustering at five
 
 ## Deep Neural Network
 Deep neural networks has the ability to learn from large sets of input data, regardless of data complexity.  We wanted to explore deep neural networks to see if it's a good use case for our dataset as well.  To accomplish this task, we performed the following:
+
 * Load the dataset into Pandas dataframe 
 * Clean the dataset by removing missing value since historical data is not complete
 * Drop non-numeric/unnecessary features such as country code, per-capita
@@ -184,7 +185,7 @@ Deep neural networks has the ability to learn from large sets of input data, reg
 ![Deep_learning](https://github.com/kiwidata/Emission-by-Country/blob/violet-huang/violet_huang/deep%20learning.PNG)
 
 ## Discussion
-For deep neural network, the application we used in class was for classfication, where the target variable is labeled and belongs to a class. In our use case, the target variable is continuous, and the model loss fuction "binary_crossentropy" is not a good fit because it does not work on continous data.  This is shown in the results where the model accuracy is 0 after training.  To overcome this, we switched the loss function to "mean squared error" to try to evaluate the model.  We are able to show that the model is able to reduce the loss and improve accuracy after training.  However deep neural network is not meant to be a replacement for learning regression or logistical regression, and in many cases it does not perform better.  For our use case, it definitely seems to be the case where it is not a good fit.  We believed using linear regression gave us the best result for our dataset and goal.
+For deep neural network, the application we used was for classfication, where the target variable is labeled and belongs to a class. In our use case, the target variable is continuous, and the model loss fuction "binary_crossentropy" is not a good fit because it does not work on continous data.  This is shown in the results where the model accuracy is 0 after training.  To overcome this, we switched the loss function to "mean squared error" to try to evaluate the model.  We are able to show that the model is able to reduce the loss and improve accuracy after training.  However deep neural network is not meant to be a replacement for learning regression or logistical regression, and in many cases it does not perform better.  For our use case, it definitely seems to be the case where it is not a good fit.  We believed using linear regression gave us the best result for our dataset and goal.
 
 # Stage 3: Data Visualization
 
@@ -194,6 +195,6 @@ For deep neural network, the application we used in class was for classfication,
 
 The paris climate accord goal of CO2 emission will not be reached based on the current levels of global emissions. Hence by 2030 we will not reach a 40% CO2 emission reduction rate compared to the 1990's level. Assuming the emission trend remains the same, the linear regression analysis shows the CO2 emission will keep increasing to about 42129 MtCO2 in 2030. Almost triple the target rate set for 2030 of ~16000 MtCO2.
 
-In 2021, based on our dataset, China (30.9%), USA (13.5%), India (7.3%) are the world biggest polluters. These 3 countries emitted more than 51.7% (19189 MtCO2) of all global CO2. By performing K-means clustering at five year intervals.  We saw the trend of how large emitting countries change thorughout history.  As history tells us, the largest emitters started in Europe in the early 20th century, shifted to the US, and eventually to China in the 21st century.
+In 2021, based on our dataset, China (30.9%), USA (13.5%), India (7.3%) are the world biggest polluters. These 3 countries emitted more than 51.7% (19189 MtCO2) of all global CO2. By performing K-means clustering at five year intervals.  We saw the trend of how large emitting countries change throughout history.  As history tells us, the largest emitters started in Europe in the early 20th century, shifted to the US, and eventually to China in the 21st century.
 
 One other model was performed 'deep neural network'. However it was not a good fit for our analysis since it was focusing in classification and not prediction. Our data is continuous.
