@@ -3,13 +3,13 @@
 ## Creating a Database to Store the Datasets
 
 Software Used:
-Kaggle
-Amazon Web Services (AWS) - RDS, S3, EC2
-PostgresSQL 13.7-R1
-pgAdmin 4
-Google Colab
-PySpark
-VS Code 1.75.0
+* Kaggle
+* Amazon Web Services (AWS) - RDS, S3, EC2
+* PostgresSQL 13.7-R1
+* pgAdmin 4
+* Google Colab
+* PySpark
+* VS Code 1.75.0
 
 * Obtained emissions_by_country dataset from Kaggle
 * Created an AWS RDS, emissions-by-country
