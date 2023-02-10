@@ -58,7 +58,9 @@ The dataset provided was cleaned and ready for use for analysis. Some cleaning w
 - Exported the percentage of emitters by country - https://github.com/kiwidata/Emission-by-Country/blob/main/emission%25bytype.csv
 - Exported the 2021-2050 global CO2 prediction by country - https://github.com/kiwidata/Emission-by-Country/blob/main/CO2%20Emission%20Predictions%202021-2050.csv
 
-## Software Used
+## Creating the database
+
+### Software Used
 * Kaggle
 * Amazon Web Services (AWS) - RDS, S3, EC2
 * PostgresSQL 13.7-R1
@@ -67,7 +69,7 @@ The dataset provided was cleaned and ready for use for analysis. Some cleaning w
 * PySpark
 * VS Code 1.75.0
 
-## Outline of Workflow
+### Outline of Workflow
 * Obtained emissions_by_country dataset from Kaggle
 * Created an AWS RDS, emissions-by-country
 * Created a database in pgAdmin and connected to the RDS instance
