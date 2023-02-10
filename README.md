@@ -76,7 +76,7 @@ The dataset provided was cleaned and ready for use for analysis. Some cleaning w
 * Used Google Colab and PySpark to extract, transform, and load the datasets into emission-by-country database
 * Shut Down all the instances created with AWS
 * Completed Notebook: ![emissions_by_country_jm.ipynb](https://github.com/kiwidata/Emission-by-Country/blob/main/emissions_by_country_jm.ipynb)
-* Schema: ![schema.]()
+* Schema: ![schema.sql](https://github.com/kiwidata/Emission-by-Country/blob/main/schema.sql)
 
 # Stage 2: Analysis 
 
