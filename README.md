@@ -1,4 +1,4 @@
-### Tableau Link: https://public.tableau.com/views/EmissionsperCountry_16745347943690/GlobalCO2LinearPrediction?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link
+### Dashboard Link 1: [Link](https://public.tableau.com/views/EmissionsperCountry_16745347943690/GlobalCO2LinearPrediction?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link)
 
 # Group Project - Emission by Country
 Carbon emissions and environmental protection issues become a widely used term and concept in the public debate on responsibility and abatement action against the threat of global climate change. Therefore, forecasting carbon emissions is of great significance to track countries' progress in meeting carbon emission targets set by the Paris Climate Agreement. This project analyzes estimates of global and national CO2 emissions using machine learning models. The aim is to predict if the goal of the Paris Climate Agreement Accord can be reached. One specific goal, in particular in this analysis, is to find if global CO2 emission level will be reduce by more than 40% compared to the 1990s level of emission. 
