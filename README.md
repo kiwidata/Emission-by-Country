@@ -165,6 +165,40 @@ The top 3 polluting countries (China, USA, and India) contributes to more than 5
 
 In 1990 global emissions were 22757.48 MtCO2. Based on the Paris accord the goal was to reduce emissions by at least 40% by 2030 (~16000 MtCO2) compared to 1990 levels. However based on our models this will not be the case. The most accurate model '1980-2021' shows a prediction of 42129 MtCO2 in 2030. An 85% increased from 1990. The most optimistic model '1900-2022' shows a prediction of 34367 MtCO2 by 2030 which would show a slight decline from today's level, however this is assuming emission growth rate decrease, and even then it will not meet the desired goal. We can conclude that, based on these models, The Paris climate accord goal of CO2 emission will not be reached based on the current levels of global emissions. This is assuming the emission trend remains the same. 
 
+## Supervised Learning 
+### ARIMA
+Auto Regressive Integrated Moving Average
+ARIMA model is a combination of 3 model:
+
+AR (p) : Auto Regressive
+I (d) : Integrated
+MA (q) : Moving Average
+(p,d,q) is known as the order of the ARIMA model. Values of these parameters are based on the above mentioned models.
+
+p : Number of auto regressive terms.
+d : Number of differencing orders required to make the time series stationary.
+q : Number of lagged forecast errors in the prediction equation.
+Selection criteria for the order of ARIMA model :
+
+p : Lag value where the Partial Autocorrelation (PACF) graph cuts off or drops to 0 for the 1st instance.
+d : Number of times differencing is carried out to make the time series stationary.
+q : Lag value where the Autocorrelation (ACF) graph crosses the upper confidence interval for the 1st instance.
+
+### Augmented Dickey–Fuller test
+Augmented Dickey Fuller test ( ADF Test) is a common statistical test used to test whether ARIMA time series is stationary or not. In ARIMA time series forecasting , the first step is to determine the number of differencing required to make the series stationary because model cannot forecast on non stationary time series data.
+The ADF test expands the Dickey-Fuller test equation to include high order regressive process in the model.
+The so called augmented Dickey Fuller test is the t test for the null hypothesis based on the regression:
+![](https://www.machinelearningplus.com/wp-content/uploads/2019/11/equation_3.png)
+Since the null hypothesis assumes the presence of unit root, that is α=1, the p-value obtained should be less than the significance level (say 0.05) in order to reject the null hypothesis. Thereby, inferring that the series is stationary.
+### Results
+![](DATA/1.PNG)
+![](DATA/2.PNG)
+![](DATA/3.PNG)
+![](DATA/4.PNG)
+![](DATA/5.PNG)
+![](DATA/6.PNG)
+![](DATA/7.PNG)
+Refer to [jupyter notebook](https://github.com/kiwidata/Emission-by-Country/blob/main/FeatureEngineering_and_arima.ipynb) for in-depth analysis.
 ## Unsupervised Learning 
 
 The dataset provides detailed emissions level by country for over 200 years.  This can give us an insight into how each country's emission level changes over the course of history.  By grouping countries together, we can identify large emitting countries quickly and target them to reduce emissions the most.  For this task, we utlized unsupervised learning techniques, specifically K-means clustering. This is also a great use case because K-means can learn from un-labeled data to group the counties by their emissions levels.  We performed the following steps:
@@ -231,6 +265,8 @@ These 5 World maps represent our results for the emission of CO2 per Country usi
 FUN Fact: I actually had to make a Calculated Field and a Parameter (Using an IF/THEN statement) which was the only way to Colour coordinate our findings with how each country positively or negatively reacts to the change of time given. For an example the graph will look very different accross the board if you were to use the year of 2021, in comparison to the year of 2000 or any other given year. Note: if you change the time only by 1 Year, the graphs should stay relative to the same colors within that visualization. 
 
 ### Tableau Embedded Code: <div class='tableauPlaceholder' id='viz1675900877884' style='position: relative'><noscript><a href='#'><img alt='Global CO2 &#47; Linear Prediction ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Em&#47;EmissionsperCountry_16745347943690&#47;GlobalCO2LinearPrediction&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='EmissionsperCountry_16745347943690&#47;GlobalCO2LinearPrediction' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Em&#47;EmissionsperCountry_16745347943690&#47;GlobalCO2LinearPrediction&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1675900877884');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='777px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+[Link to Dashboard 2](https://public.tableau.com/app/profile/deepam.das/viz/EmissionsbyCountry_16752898855890/Dashboard2?publish=yes)
 
 # Conclusion
 
