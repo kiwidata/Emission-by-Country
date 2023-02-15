@@ -14,6 +14,7 @@ The project is divided into four stages:
   * Export clean data frame to a file
 * Stage 2: Analysis
   * Top 3 Polluters and Linear Regression
+  * Supervised Machine Learning
   * Unsupervised Machine Learning
   * Deep Neural Network
 * Stage 3: Data Visualization
